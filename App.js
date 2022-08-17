@@ -1,10 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [visible, setVisible] = useState(false)
+
+  const onPress = () => {
+    setVisible(true)
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Button testID='abcc' onPress={onPress} title='abc' />
+      {visible &&
+        <Text testID='now-visible'>Open up App.js to start working on your app!</Text>
+      }
       <StatusBar style="auto" />
     </View>
   );
