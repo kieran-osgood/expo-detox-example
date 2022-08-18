@@ -5,12 +5,7 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "detoxapp.app",
-      "build": "eas prebuild -p ios --profile preview --local"
-    },
-    "android": {
-      "type": "android.apk",
-      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY"
+      "binaryPath": "bin/Exponent.app"
     }
   },
   "devices": {
@@ -19,22 +14,12 @@
       "device": {
         "type": "iPhone 11"
       }
-    },
-    "emulator": {
-      "type": "android.emulator",
-      "device": {
-        "avdName": "Pixel_3a_API_30_x86"
-      }
     }
   },
   "configurations": {
     "ios": {
       "device": "simulator",
       "app": "ios"
-    },
-    "android": {
-      "device": "emulator",
-      "app": "android"
     }
   }
 }

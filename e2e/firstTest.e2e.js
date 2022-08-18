@@ -1,11 +1,18 @@
+const { reloadApp } = require('detox-expo-helpers');
+
+// function sleep(ms) {
+//   return new Promise((resolve) => setTimeout(resolve, ms));
+// }
+
 describe('Example', () => {
   beforeAll(async () => {
-    await device.launchApp();
+    await reloadApp();
+    const welcomeMessage = element(by.id("abc"));
+    await waitFor(welcomeMessage).toBeVisible().withTimeout(20000);
+
   });
 
-  beforeEach(async () => {
-    await device.reloadReactNative();
-  });
+  beforeEach(async () => {});
 
   it('should have welcome screen', async () => {
     await expect(element(by.id('abc'))).toBeVisible();
@@ -14,6 +21,6 @@ describe('Example', () => {
 
   it('should show hello screen after tap', async () => {
     await element(by.id('abc')).tap();
-    await expect(element(by.text('Open up App.js to start working on your app!'))).toBeVisible();
+    await waitFor(element(by.id('now-visible'))).toBeVisible();
   });
 });

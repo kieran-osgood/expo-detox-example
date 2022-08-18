@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Button testID='abcc' onPress={onPress} title='abc' />
+      <Button testID='abc' onPress={onPress} title='abc' />
       {visible &&
         <Text testID='now-visible'>Open up App.js to start working on your app!</Text>
       }
