@@ -4,14 +4,15 @@
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
-    "ios": "expo run:ios",
+    "ios:run": "expo run:ios",
+    "ios:start": "expo start --ios",
     "web": "expo start --web",
     "e2e:build": "detox build --configuration ios",
     "e2e:test": "detox test --configuration ios",
-    "e2e": "yarn e2e:build && yarn e2e:test",
-    "test": "node_modules/.bin/jest ./e2e/*.e2e.js",
+    "e2e": "yarn e2e:test",
+    "test": "jest ./e2e/*.e2e.js",
     "e2e:untar": "tar -xzvf build-1660728977605.tar.gz",
-    "e2e:install": "xcrun simctl install booted detoxapp.app" 
+    "e2e:install": "xcrun simctl install booted detoxapp.app"
   },
   "dependencies": {
     "expo": "~46.0.7",
