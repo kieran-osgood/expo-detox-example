@@ -1,5 +1,4 @@
 node_modules/
-.expo/
 dist/
 npm-debug.*
 *.jks
@@ -69,6 +68,7 @@ buck-out/
 
 # Expo
 .expo/
+!.expo/packager-info.json
 web-build/
 dist/
 
